@@ -51,18 +51,21 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            flex-wrap: wrap; /* permite que los links se muevan a otra línea */
         }
 
         header a {
             color: #fff;
             font-weight: bold;
+            text-align: center;
+            flex: 1 1 auto; /* links ocupan espacio igual si hay varias líneas */
         }
 
         header a:hover {
             text-decoration: underline;
         }
 
-        /* Hero banner con imagen y texto */
+        /* Hero banner con imagen */
         .hero-banner {
             background-image: url('img/banner.jpeg'); /* tu banner */
             background-size: cover;
@@ -85,18 +88,10 @@
             z-index: 1;
         }
 
-        .hero-text {
+        .hero-banner h1 {
             position: relative;
             z-index: 2;
-        }
-
-        .hero-text h1 {
             font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-text p {
-            font-size: 1.5rem;
         }
 
         /* Secciones */
@@ -155,7 +150,7 @@
             list-style-type: disc;
         }
 
-        /* Contacto */
+        /* Sección Contacto */
         .contact {
             text-align: center;
             padding: 3rem 1.5rem;
@@ -171,7 +166,7 @@
 
         .contact a {
             display: inline-block;
-            background-color: #000;
+            background-color: #000; /* botón negro */
             color: #fff;
             padding: 0.75rem 1.5rem;
             border-radius: 5px;
@@ -180,11 +175,22 @@
         }
 
         .contact a:hover {
-            background-color: #333;
+            background-color: #333; /* ligeramente más claro */
         }
 
         /* Responsive */
         @media (max-width: 800px) {
+            header {
+                flex-direction: column; /* links verticales en móvil */
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+            header a {
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+
             .about-block, .experience-block {
                 flex-direction: column;
                 align-items: center;
@@ -198,12 +204,8 @@
                 margin-top: 1rem;
             }
 
-            .hero-text h1 {
+            .hero-banner h1 {
                 font-size: 2rem;
-            }
-
-            .hero-text p {
-                font-size: 1rem;
             }
         }
     </style>
@@ -218,12 +220,9 @@
         <a href="#contact">LinkedIn</a>
     </header>
 
-    <!-- Hero banner -->
+    <!-- Hero banner con texto sobre la imagen -->
     <div class="hero-banner">
-        <div class="hero-text">
-            <h1>Alberto Ortiz González</h1>
-            <p>Ingeniero Informático</p>
-        </div>
+        <h1>Alberto Ortiz González - Ingeniero Informático</h1>
     </div>
 
     <!-- Sección Acerca de -->
