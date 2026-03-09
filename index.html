@@ -62,7 +62,7 @@
             text-decoration: underline;
         }
 
-        /* Hero banner con imagen */
+        /* Hero banner con imagen y texto */
         .hero-banner {
             background-image: url('img/banner.jpeg'); /* tu banner */
             background-size: cover;
@@ -85,15 +85,28 @@
             z-index: 1;
         }
 
+        .hero-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+        }
+
         /* Secciones */
         section {
             padding: 3rem 1.5rem;
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 0 auto 2rem auto;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
         }
 
         /* Acerca de */
@@ -142,13 +155,13 @@
             list-style-type: disc;
         }
 
-        /* Sección Contacto */
+        /* Contacto */
         .contact {
             text-align: center;
             padding: 3rem 1.5rem;
-            background-color: #fff; /* igual que las demás secciones */
-            color: #333; /* texto negro */
-            border-radius: 10px; /* opcional para armonizar con otras secciones */
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
 
@@ -158,8 +171,8 @@
 
         .contact a {
             display: inline-block;
-            background-color: #000; /* botón negro */
-            color: #fff; /* texto blanco */
+            background-color: #000;
+            color: #fff;
             padding: 0.75rem 1.5rem;
             border-radius: 5px;
             font-weight: bold;
@@ -167,7 +180,7 @@
         }
 
         .contact a:hover {
-            background-color: #333; /* ligeramente más claro al pasar el mouse */
+            background-color: #333;
         }
 
         /* Responsive */
@@ -184,6 +197,14 @@
             .experience-img img {
                 margin-top: 1rem;
             }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -198,7 +219,12 @@
     </header>
 
     <!-- Hero banner -->
-    <div class="hero-banner"></div>
+    <div class="hero-banner">
+        <div class="hero-text">
+            <h1>Alberto Ortiz González</h1>
+            <p>Ingeniero Informático</p>
+        </div>
+    </div>
 
     <!-- Sección Acerca de -->
     <section id="about">
