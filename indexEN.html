@@ -6,14 +6,14 @@
 <title>Alberto Ortiz González</title>
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="img/favicon.png" />
+img/favicon.png
 
 <!-- SEO -->
-<meta name="description" content="Professional portfolio of Alberto Ortiz González, Computer Engineer specializing in Cybersecurity, regulatory compliance, accessibility and ethical hacking.">
+<meta name="description" content="Professional portfolio of Alberto Ortiz González, Computer Engineer specialized in Cybersecurity, regulatory compliance, accessibility and pentesting.">
 <meta name="author" content="Alberto Ortiz González">
 
 <style>
-/* Reset */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -29,19 +29,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #0073b1;
-}
-
-h1,h2,h3,h4 {
-    margin-bottom: 0.5rem;
-}
-
-p, li {
-    margin-bottom: 0.5rem;
-}
-
-ul {
-    padding-left: 1.5rem;
+    color: #fff;
 }
 
 /* Header */
@@ -57,6 +45,11 @@ header {
     z-index: 1000;
 }
 
+header .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -64,42 +57,64 @@ header {
 }
 
 .nav-links a {
-    color: #fff;
     font-weight: bold;
+    color: #fff;
 }
 
 .nav-links a:hover {
     text-decoration: underline;
 }
 
-/* Language switch */
-.lang-switch {
-    color: #fff;
+/* Idiomas */
+.lang-switch a {
     font-weight: bold;
-    cursor: pointer;
+    color: #fff;
 }
 
-.lang-switch span {
-    margin-left: 8px;
-}
-
-.lang-switch span:hover {
+.lang-switch a:hover {
     text-decoration: underline;
 }
 
-/* Hamburger button */
+/* Botón hamburguesa */
 .menu-toggle {
     display: none;
     flex-direction: column;
-    cursor: pointer;
     gap: 4px;
+    cursor: pointer;
 }
 
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: #fff;
-    display: block;
+    background: white;
+}
+
+/* Móvil */
+@media (max-width: 800px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #000;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 0.8rem 0;
+        width: 100%;
+    }
 }
 
 /* Hero banner */
@@ -107,7 +122,6 @@ header {
     background-image: url('img/banner.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     padding: 6rem 1rem;
     text-align: center;
     color: #fff;
@@ -117,151 +131,69 @@ header {
 .hero-banner::after {
     content: "";
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    inset: 0;
     background: rgba(0,0,0,0.4);
-    z-index: 1;
 }
 
 .hero-banner h1 {
     position: relative;
     z-index: 2;
     font-size: 3rem;
-    line-height: 1.2;
 }
 
-/* Sections */
+/* Secciones */
 section {
-    padding: 3rem 1.5rem;
+    background: white;
     max-width: 1000px;
-    margin: 0 auto 2rem auto;
-    background-color: #fff;
+    margin: 2rem auto;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* About */
-.about-block {
+.about-block,
+.experience-block {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
-    align-items: flex-start;
 }
 
-.about-img img {
+.about-img img,
+.experience-img img {
     width: 200px;
     border-radius: 10px;
-    object-fit: cover;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.about-text {
-    flex: 1;
-}
-
-/* Experience */
-.experience-block {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.experience-text {
-    flex: 1;
-}
-
 .experience-img img {
-    width: 100px;
-    border-radius: 5px;
-    object-fit: contain;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Certifications */
-.certifications ul {
-    list-style-type: disc;
+    width: 120px;
 }
 
 /* Contact */
-.contact {
-    text-align: center;
-    padding: 3rem 1.5rem;
-    background-color: #fff;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
 .contact a {
+    background: #000;
+    color: white;
+    padding: 1rem 2rem;
     display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
     border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.contact a:hover {
-    background-color: #333;
+    margin-top: 1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #000;
-    color: #fff;
+    background: #000;
+    color: white;
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
-    font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 800px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        text-align: center;
-        background-color: #000;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        padding: 1rem 0;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .about-block, .experience-block {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-img img, .experience-img img {
-        margin-bottom: 1rem;
-    }
-
-    .hero-banner h1 {
-        font-size: 2rem;
-    }
 }
 </style>
-
 </head>
+
 <body>
 
 <header>
-    <div>Computer Engineer</div>
+    <div class="title">Computer Engineer</div>
 
     <div class="menu-toggle" onclick="toggleMenu()">
         <span></span><span></span><span></span>
@@ -272,104 +204,95 @@ footer {
         #experienceExperience</a>
         #certificationsCertifications</a>
         #contactContact</a>
-        
-        <!-- Languages -->
+
         <div class="lang-switch">
-            index.html<span>ES</span></a> |
-            indexEN.html<span>EN</span></a>
+            index.htmlES</a> |
+            indexEN.htmlEN</a>
         </div>
     </nav>
 </header>
 
-<!-- Hero banner -->
 <div class="hero-banner">
     <h1>Alberto Ortiz González</h1>
 </div>
 
-<!-- About Section -->
 <section id="about">
     <div class="about-block">
         <div class="about-img">
-            <img src="img/mi-foto.jpg" alt="Alberto Ortiz Photo">
+            img/mi-foto.jpg
         </div>
-        <div class="about-text">
+        <div>
             <h2>About</h2>
-            <p>I am a 4th year Computer Engineering student currently completing my internship at EY within the Cyber Security area (CNS EW - TC). I participate in cybersecurity projects ranging from regulatory compliance (GDPR, ISO, information security) to training in ethical hacking, pentesting and vulnerability analysis.</p>
-            <p>I am particularly interested in how technology can improve security, risk management and digital transformation. I am also motivated by participating in projects where technology brings value to the business through analysis, digital transformation and process optimization.</p>
-            <p>Throughout my degree I have worked with languages such as Python, Java, C++, SQL, VHDL and MATLAB, as well as tools like Power BI and Excel, also applying agile methodologies in academic projects.</p>
-            <p>I lived 7 years in the United Kingdom, which gave me fluency in English, a global vision and adaptability to different environments. I also worked in sectors such as executive transport (VTC) and hospitality, where I developed skills in customer service, incident resolution, leadership and time management.</p>
-            <p>I consider myself an analytical, decisive person with great desire to continue learning and contributing in the field of cybersecurity and technology consulting.</p>
+            <p>I am a 4th-year Computer Engineering student and currently completing an internship at EY within the Cyber Security area (CNS EW - TC). I participate in cybersecurity-related projects, from regulatory compliance (GDPR, ISO, information security) to training in ethical hacking, pentesting and vulnerability analysis.</p>
+            <p>I am particularly interested in how technology can improve security, risk management and digital transformation. I am also motivated by participating in projects where technology provides value to the business through analysis, digital transformation and process optimization.</p>
+            <p>Throughout my studies I have worked with languages such as Python, Java, C++, SQL, VHDL and MATLAB, as well as tools like Power BI and Excel, also applying agile methodologies in various academic projects.</p>
+            <p>I lived for 7 years in the United Kingdom, which gave me fluency in English, a global mindset and adaptability to different environments. I have also worked in sectors such as executive transport (VTC) and hospitality, where I developed skills in customer service, incident resolution, leadership and time management.</p>
+            <p>I consider myself an analytical, proactive person with a strong desire to continue learning and contributing in the field of cybersecurity and technology consulting.</p>
         </div>
     </div>
 </section>
 
-<!-- Experience Section -->
 <section id="experience">
     <h2>Experience</h2>
-
     <div class="experience-block">
-        <div class="experience-text">
+        <div>
             <h3>Cyber Security Internship (CNS EW - TC)</h3>
-            <p>Ernst &amp; Young (EY-Spain) | Sep 2025 - Present</p>
+            <p>Ernst & Young (EY Spain) | Sep 2025 - Present</p>
 
             <h4>Cybersecurity and Regulatory Compliance</h4>
             <ul>
-                <li>Participation in cybersecurity projects, including regulatory compliance (GDPR, ISO, information security).</li>
-                <li>Training and collaboration in ethical hacking, pentesting and vulnerability analysis.</li>
-                <li>Monitoring of security system implementation and risk management projects.</li>
-                <li>Practical learning in a creative, collaborative environment with national and international impact.</li>
+                <li>Participation in cybersecurity projects including regulatory compliance (GDPR, ISO, information security).</li>
+                <li>Training and collaboration in ethical hacking, pentesting and vulnerability assessment.</li>
+                <li>Monitoring security system implementation and risk management projects.</li>
+                <li>Practical learning within a creative, collaborative and internationally oriented professional environment.</li>
             </ul>
 
             <h4>Gaming Systems Security and Certification</h4>
             <ul>
-                <li>Advisory and preparation of certification reports for gaming system functionality and security according to DGOJ and Law 13/2011.</li>
-                <li>Participation in evaluation and validation processes for obtaining official certifications.</li>
-                <li>Implementation of Information Security Management Systems based on ISO 27001 in gaming operators.</li>
-                <li>Audits of online and on-site gaming systems ensuring compliance with the Spanish regulatory framework.</li>
+                <li>Preparation of security and functionality certification reports according to DGOJ and Law 13/2011.</li>
+                <li>Participation in evaluation and validation processes to obtain official certifications.</li>
+                <li>Implementation of ISO 27001-based Information Security Management Systems.</li>
+                <li>Audits of online and onsite gaming systems ensuring compliance with Spanish regulations.</li>
             </ul>
 
-            <h4>Web Accessibility and Regulatory Compliance</h4>
+            <h4>Web Accessibility and Compliance</h4>
             <ul>
-                <li>Preparation and review of Accessibility Statements for public entities.</li>
-                <li>Evaluation of web and mobile accessibility according to Directive (EU) 2016/2102, RD 1112/2018 and WCAG 2.1.</li>
-                <li>Analysis of perceptibility, operability, understandability and robustness, identifying accessibility barriers.</li>
-                <li>Advisory on best practices and strategies for continuous improvement of digital accessibility.</li>
+                <li>Creation and revision of Accessibility Statements for public organisations.</li>
+                <li>Evaluation of web and mobile accessibility according to WCAG 2.1, Directive (EU) 2016/2102 and RD 1112/2018.</li>
+                <li>Identification of accessibility barriers.</li>
+                <li>Recommendations for continuous improvement of digital accessibility.</li>
             </ul>
         </div>
 
         <div class="experience-img">
-            <img src="img/ey.jpg" alt="EY Logo">
+            img/ey.jpg
         </div>
     </div>
 </section>
 
-<!-- Certifications Section -->
 <section id="certifications">
     <h2>Certifications & Licenses</h2>
     <ul>
-        <li>SQL for Data Science (Grade: 88.49%) — University of California, Davis</li>
-        <li>English Certificate (C2 Proficiency) — EF SET</li>
-        <li>First Certificate in English — Cambridge University Press &amp; Assessment English</li>
-        <li>Data & Cybersecurity (Grade: 87.63%) — BBVA</li>
-        <li>NATIONAL SECURITY SCHEME (RD 311/2022, May 3rd) — CCN-CERT (National Cryptologic Center)</li>
+        <li>SQL for Data Science – UC Davis</li>
+        <li>English Certificate (C2 Proficiency) – EF SET</li>
+        <li>First Certificate in English – Cambridge</li>
+        <li>Data & Cybersecurity – BBVA</li>
+        <li>NATIONAL SECURITY SCHEME (RD 311/2022) – CCN CERT</li>
     </ul>
 </section>
 
-<!-- Contact Section -->
 <section id="contact" class="contact">
     <h2>Contact</h2>
-    <a href="https://www.linkedin.com/in/alberto-ortiz-gonzalez" target="_blank">Connect on LinkedIn</a>
+    https://www.linkedin.com/in/alberto-ortiz-gonzalez
 </section>
 
-<!-- Footer -->
 <footer>
     © 2026 · Alberto Ortiz González · All rights reserved
 </footer>
 
 <script>
 function toggleMenu() {
-    const nav = document.querySelector('.nav-links');
-    nav.classList.toggle('show');
+    document.querySelector('.nav-links').classList.toggle('show');
 }
 </script>
 
