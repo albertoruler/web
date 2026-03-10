@@ -8,6 +8,10 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="img/favicon.png" />
 
+<!-- SEO -->
+<meta name="description" content="Professional portfolio of Alberto Ortiz González, Computer Engineer specializing in Cybersecurity, regulatory compliance, accessibility and ethical hacking.">
+<meta name="author" content="Alberto Ortiz González">
+
 <style>
 /* Reset */
 * {
@@ -68,7 +72,7 @@ header {
     text-decoration: underline;
 }
 
-/* Language selector */
+/* Language switch */
 .lang-switch {
     color: #fff;
     font-weight: bold;
@@ -83,7 +87,7 @@ header {
     text-decoration: underline;
 }
 
-/* Hamburger */
+/* Hamburger button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -98,7 +102,7 @@ header {
     display: block;
 }
 
-/* Hero */
+/* Hero banner */
 .hero-banner {
     background-image: url('img/banner.jpeg');
     background-size: cover;
@@ -176,6 +180,11 @@ section {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Certifications */
+.certifications ul {
+    list-style-type: disc;
+}
+
 /* Contact */
 .contact {
     text-align: center;
@@ -247,6 +256,7 @@ footer {
     }
 }
 </style>
+
 </head>
 <body>
 
@@ -258,76 +268,73 @@ footer {
     </div>
 
     <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#class="lang-switch">
-            <span onclick="window.location.href='indexES.html'">ES</span> |
-            <span>EN</span>
+        #aboutAbout</a>
+        #experienceExperience</a>
+        #certificationsCertifications</a>
+        #contactContact</a>
+        
+        <!-- Languages -->
+        <div class="lang-switch">
+            index.html<span>ES</span></a> |
+            indexEN.html<span>EN</span></a>
         </div>
     </nav>
 </header>
 
+<!-- Hero banner -->
 <div class="hero-banner">
     <h1>Alberto Ortiz González</h1>
 </div>
 
-<!-- ABOUT -->
+<!-- About Section -->
 <section id="about">
     <div class="about-block">
         <div class="about-img">
-            <img src="img/mi-foto.jpg" alt="Picture of Alberto Ortiz">
+            <img src="img/mi-foto.jpg" alt="Alberto Ortiz Photo">
         </div>
-
         <div class="about-text">
             <h2>About</h2>
-
-            <p>I am a 4th-year Computer Engineering student currently completing an internship at EY within the Cyber Security area (CNS EW - TC). I participate in projects related to cybersecurity, including regulatory compliance (GDPR, ISO, information security), ethical hacking training, pentesting, and vulnerability analysis.</p>
-
-            <p>I am particularly interested in how technology can improve security, risk management, and digital transformation. I am also motivated by participating in projects where technology adds value to business through analysis, digital transformation, and process optimization.</p>
-
-            <p>Throughout my studies, I have worked with languages such as Python, Java, C++, SQL, VHDL, and MATLAB, as well as tools like Power BI and Excel, applying agile methodologies in various academic projects.</p>
-
-            <p>I lived 7 years in the United Kingdom, which provided me with English fluency, a global perspective, and adaptability to diverse environments. I have also worked in sectors such as executive transport (VTC) and hospitality, developing skills in customer service, incident resolution, leadership, and time management.</p>
-
-            <p>I consider myself an analytical, proactive person eager to continue learning and contributing in the fields of cybersecurity and technology consulting.</p>
+            <p>I am a 4th year Computer Engineering student currently completing my internship at EY within the Cyber Security area (CNS EW - TC). I participate in cybersecurity projects ranging from regulatory compliance (GDPR, ISO, information security) to training in ethical hacking, pentesting and vulnerability analysis.</p>
+            <p>I am particularly interested in how technology can improve security, risk management and digital transformation. I am also motivated by participating in projects where technology brings value to the business through analysis, digital transformation and process optimization.</p>
+            <p>Throughout my degree I have worked with languages such as Python, Java, C++, SQL, VHDL and MATLAB, as well as tools like Power BI and Excel, also applying agile methodologies in academic projects.</p>
+            <p>I lived 7 years in the United Kingdom, which gave me fluency in English, a global vision and adaptability to different environments. I also worked in sectors such as executive transport (VTC) and hospitality, where I developed skills in customer service, incident resolution, leadership and time management.</p>
+            <p>I consider myself an analytical, decisive person with great desire to continue learning and contributing in the field of cybersecurity and technology consulting.</p>
         </div>
     </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- Experience Section -->
 <section id="experience">
     <h2>Experience</h2>
 
     <div class="experience-block">
         <div class="experience-text">
-
             <h3>Cyber Security Internship (CNS EW - TC)</h3>
-            <p>Ernst & Young (EY-Spain) | Sep 2025 – Present</p>
+            <p>Ernst &amp; Young (EY-Spain) | Sep 2025 - Present</p>
 
             <h4>Cybersecurity and Regulatory Compliance</h4>
             <ul>
                 <li>Participation in cybersecurity projects, including regulatory compliance (GDPR, ISO, information security).</li>
-                <li>Training and collaboration in ethical hacking, pentesting, and vulnerability assessments.</li>
-                <li>Monitoring security system implementation and risk management projects.</li>
-                <li>Hands-on learning in a creative, collaborative environment with national and international scope.</li>
+                <li>Training and collaboration in ethical hacking, pentesting and vulnerability analysis.</li>
+                <li>Monitoring of security system implementation and risk management projects.</li>
+                <li>Practical learning in a creative, collaborative environment with national and international impact.</li>
             </ul>
 
             <h4>Gaming Systems Security and Certification</h4>
             <ul>
-                <li>Consulting and drafting certification reports on the functionality and security of gaming systems according to DGOJ and Law 13/2011.</li>
-                <li>Participation in evaluation and validation processes to obtain official certifications.</li>
-                <li>Implementation of Information Security Management Systems based on ISO 27001 for gaming operators.</li>
-                <li>Audits of online and physical gaming systems ensuring compliance with Spanish regulatory frameworks.</li>
+                <li>Advisory and preparation of certification reports for gaming system functionality and security according to DGOJ and Law 13/2011.</li>
+                <li>Participation in evaluation and validation processes for obtaining official certifications.</li>
+                <li>Implementation of Information Security Management Systems based on ISO 27001 in gaming operators.</li>
+                <li>Audits of online and on-site gaming systems ensuring compliance with the Spanish regulatory framework.</li>
             </ul>
 
             <h4>Web Accessibility and Regulatory Compliance</h4>
             <ul>
-                <li>Drafting and reviewing Accessibility Declarations for public organizations.</li>
-                <li>Web and mobile accessibility assessment following Directive (EU) 2016/2102, RD 1112/2018, and WCAG 2.1.</li>
-                <li>Analysis of perceptibility, operability, understandability, and robustness, identifying accessibility barriers.</li>
-                <li>Consulting on best practices and strategies for continuous digital accessibility improvement.</li>
+                <li>Preparation and review of Accessibility Statements for public entities.</li>
+                <li>Evaluation of web and mobile accessibility according to Directive (EU) 2016/2102, RD 1112/2018 and WCAG 2.1.</li>
+                <li>Analysis of perceptibility, operability, understandability and robustness, identifying accessibility barriers.</li>
+                <li>Advisory on best practices and strategies for continuous improvement of digital accessibility.</li>
             </ul>
-
         </div>
 
         <div class="experience-img">
@@ -336,25 +343,25 @@ footer {
     </div>
 </section>
 
-<!-- CERTIFICATIONS -->
+<!-- Certifications Section -->
 <section id="certifications">
-    <h2>Certifications and Licenses</h2>
+    <h2>Certifications & Licenses</h2>
     <ul>
-        <li>SQL for Data Science (Grade: 88.49%) – University of California, Davis</li>
-        <li>English Certificate (C2 Proficiency) – EF SET</li>
-        <li>First Certificate in English – Cambridge University Press & Assessment English</li>
-        <li>Data & Cybersecurity (Grade: 87.63%) – BBVA</li>
-        <li>NATIONAL SECURITY SCHEME (RD 311/2022, May 3) – CCN-CERT National Cryptologic Centre</li>
+        <li>SQL for Data Science (Grade: 88.49%) — University of California, Davis</li>
+        <li>English Certificate (C2 Proficiency) — EF SET</li>
+        <li>First Certificate in English — Cambridge University Press &amp; Assessment English</li>
+        <li>Data & Cybersecurity (Grade: 87.63%) — BBVA</li>
+        <li>NATIONAL SECURITY SCHEME (RD 311/2022, May 3rd) — CCN-CERT (National Cryptologic Center)</li>
     </ul>
 </section>
 
-<!-- CONTACT -->
+<!-- Contact Section -->
 <section id="contact" class="contact">
     <h2>Contact</h2>
     <a href="https://www.linkedin.com/in/alberto-ortiz-gonzalez" target="_blank">Connect on LinkedIn</a>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
     © 2026 · Alberto Ortiz González · All rights reserved
 </footer>
