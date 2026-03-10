@@ -1,144 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Alberto Ortiz González</title>
 
-<link rel="icon" type="image/png" href="img/favicon.png" />
+<link rel="icon" type="image/png" href="img/favicon.png">
 
-<meta name="description" content="Professional portfolio of Alberto Ortiz González, Computer Engineer specialized in Cybersecurity, compliance, accessibility and pentesting.">
+<meta name="description" content="Professional CV of Alberto Ortiz González, Computer Engineering student specialized in cybersecurity, compliance, web accessibility and pentesting.">
 <meta name="author" content="Alberto Ortiz González">
 
 <style>
-/* SAME CSS AS SPANISH VERSION */
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f9f9f9;color:#333;line-height:1.6}
-a{text-decoration:none;color:#fff}
-header{background:#000;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:1rem;position:sticky;top:0;z-index:1000}
-header .title{font-size:1.2rem;font-weight:bold}
-.nav-links{display:flex;gap:2rem;align-items:center}
-.nav-links a{font-weight:bold;color:#fff}
-.nav-links a:hover{text-decoration:underline}
-.lang-switch a{color:#fff;font-weight:bold}
-.lang-switch a:hover{text-decoration:underline}
-.menu-toggle{display:none;flex-direction:column;cursor:pointer;gap:5px}
-.menu-toggle span{width:25px;height:3px;background:white}
-.hero-banner{background-image:url('img/banner.jpeg');background-size:cover;background-position:center;padding:6rem 1rem;text-align:center;color:white;position:relative}
-.hero-banner::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.45)}
-.hero-banner h1{position:relative;z-index:2;font-size:3rem}
-section{background:white;max-width:1000px;margin:2rem auto;padding:2rem;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.05)}
-.about-block,.experience-block{display:flex;flex-wrap:wrap;gap:2rem}
-.about-img img,.experience-img img{width:200px;border-radius:10px}
-.experience-img img{width:120px}
-.contact a{background:#000;color:white;padding:.8rem 1.5rem;border-radius:5px;margin-top:10px;display:inline-block}
-footer{background:black;color:white;text-align:center;padding:1.5rem;margin-top:2rem}
-@media(max-width:800px){
-.menu-toggle{display:flex}
-.nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#000;flex-direction:column;text-align:center;padding:1rem}
-.nav-links.show{display:flex}
-.nav-links a{padding:1rem 0;width:100%}
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
 }
+
+body{
+background:#f4f4f4;
+color:#333;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+background:#000;
+color:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:1rem;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.title{
+font-weight:bold;
+font-size:1.2rem;
+}
+
+.nav-links{
+display:flex;
+gap:2rem;
+align-items:center;
+}
+
+.nav-links a{
+color:white;
+font-weight:bold;
+text-decoration:none;
+}
+
+.nav-links a:hover{
+text-decoration:underline;
+}
+
+/* MENU MOBILE */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.menu-toggle span{
+width:25px;
+height:3px;
+background:white;
+}
+
+/* HERO */
+
+.hero-banner{
+background:url('img/banner.jpeg') center/cover no-repeat;
+padding:6rem 1rem;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero-banner::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.45);
+}
+
+.hero-banner h1{
+position:relative;
+z-index:2;
+font-size:3rem;
+}
+
+/* SECTIONS */
+
+section{
+background:white;
+max-width:1000px;
+margin:2rem auto;
+padding:2rem;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+h2{
+margin-bottom:1rem;
+}
+
+/* ABOUT */
+
+.about-block{
+display:flex;
+gap:2rem;
+align-items:flex-start;
+flex-wrap:wrap;
+}
+
+.about-img{
+flex:0 0 200px;
+}
+
+.about-img img{
+width:200px;
+border-radius:10px;
+}
+
+.about-text{
+flex:1;
+}
+
+/* EXPERIENCE */
+
+.experience-block{
+display:flex;
+gap:2rem;
+flex-wrap:wrap;
+}
+
+.experience-text{
+flex:1;
+}
+
+.experience-img{
+display:flex;
+align-items:flex-start;
+}
+
+.experience-img img{
+width:120px;
+}
+
+.experience-block h3{
+margin-bottom:5px;
+}
+
+.experience-company{
+font-weight:bold;
+color:#555;
+margin-bottom:15px;
+}
+
+.experience-block ul{
+margin-left:20px;
+margin-bottom:10px;
+}
+
+/* CERTIFICATIONS */
+
+.certifications ul{
+margin-left:20px;
+}
+
+.certifications li{
+margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+background:black;
+color:white;
+padding:0.8rem 1.5rem;
+display:inline-block;
+border-radius:5px;
+margin-top:15px;
+text-decoration:none;
+}
+
+.contact a:hover{
+opacity:0.85;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:1.5rem;
+margin-top:2rem;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.menu-toggle{
+display:flex;
+}
+
+.nav-links{
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:black;
+flex-direction:column;
+text-align:center;
+padding:1rem;
+display:none;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+.nav-links a{
+width:100%;
+padding:1rem 0;
+}
+
+.about-block{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.about-img img{
+width:160px;
+}
+
+.experience-block{
+flex-direction:column;
+}
+
+.experience-img{
+justify-content:center;
+margin-top:15px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="title">Computer Engineer</div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-    </div>
+<div class="title">Computer Engineer</div>
 
-    <nav class="nav-links">
-        #aboutAbout</a>
-        #experienceExperience</a>
-        #certificationsCertifications</a>
-        #contactContact</a>
-
-        <div class="lang-switch">
-            index.htmlES</a> |
-            indexEN.htmlEN</a>
-        </div>
-    </nav>
-</header>
-
-<div class="hero-banner">
-    <h1>Alberto Ortiz González</h1>
+<div class="menu-toggle" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
 </div>
 
+<nav class="nav-links">
+
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#certifications">Certifications</a>
+<a href="#contact">Contact</a>
+
+<div>
+<a href="index.html">ES</a> |
+<a href="indexEN.html">EN</a>
+</div>
+
+</nav>
+
+</header>
+
+
+<div class="hero-banner">
+<h1>Alberto Ortiz González</h1>
+</div>
+
+
 <section id="about">
-    <div class="about-block">
-        <div class="about-img">
-            img/mi-foto.jpg
-        </div>
-        <div>
-            <h2>About</h2>
-            <p>I am a 4th-year Computer Engineering student currently completing an internship at EY within the Cyber Security area (CNS EW - TC)...</p>
-            <p>I am especially interested in how technology can improve security, risk management, and digital transformation...</p>
-            <p>I have worked with Python, Java, C++, SQL...</p>
-            <p>I lived 7 years in the UK...</p>
-            <p>I consider myself analytical, proactive and eager to keep learning...</p>
-        </div>
-    </div>
+
+<div class="about-block">
+
+<div class="about-img">
+<img src="img/mi-foto.jpg" alt="Photo Alberto Ortiz">
+</div>
+
+<div class="about-text">
+
+<h2>About</h2>
+
+<p>
+I am a 4th-year Computer Engineering student currently completing an internship at EY within the Cyber Security area (CNS EW - TC). I participate in projects related to cybersecurity, ranging from regulatory compliance (GDPR, ISO, information security) to training in ethical hacking, pentesting and vulnerability analysis.
+</p>
+
+<br>
+
+<p>
+I am particularly interested in how technology can improve security, risk management and digital transformation. I am also motivated by participating in projects where technology brings real value to business through analysis, digital transformation and process optimization.
+</p>
+
+<br>
+
+<p>
+During my degree I have worked with programming languages such as Python, Java, C++, SQL, VHDL and MATLAB, as well as tools such as Power BI and Excel, also applying agile methodologies in different academic projects.
+</p>
+
+<br>
+
+<p>
+I lived for 7 years in the United Kingdom, which gave me fluency in English, a global perspective and the ability to adapt to different environments. I have also worked in sectors such as executive transportation (VTC) and hospitality, where I developed skills in customer service, incident resolution, leadership and time management.
+</p>
+
+<br>
+
+<p>
+I consider myself an analytical and proactive person with a strong willingness to keep learning and contributing within the fields of cybersecurity and technology consulting.
+</p>
+
+</div>
+</div>
+
 </section>
+
 
 <section id="experience">
-    <h2>Experience</h2>
-    <div class="experience-block">
-        <div>
-            <h3>Cyber Security Internship (CNS EW - TC)</h3>
-            <p>Ernst & Young (EY Spain) | Sep 2025 - Present</p>
 
-            <h4>Cybersecurity and Regulatory Compliance</h4>
-            <ul>
-                <li>Participation in cybersecurity projects (GDPR, ISO)...</li>
-                <li>Training in ethical hacking and pentesting...</li>
-                <li>Security systems implementation...</li>
-            </ul>
+<h2>Experience</h2>
 
-            <h4>Gaming Systems Certification</h4>
-            <ul>
-                <li>Certification reports according to DGOJ and Law 13/2011...</li>
-            </ul>
+<div class="experience-block">
 
-            <h4>Web Accessibility</h4>
-            <ul>
-                <li>Accessibility statements, WCAG 2.1 testing...</li>
-            </ul>
-        </div>
+<div class="experience-text">
 
-        <div class="experience-img">
-            img/ey.jpg
-        </div>
-    </div>
+<h3>Cyber Security Internship (CNS EW - TC)</h3>
+
+<p class="experience-company">
+Ernst & Young (EY Spain) | Sep 2025 - Present
+</p>
+
+<h4>Cybersecurity and Regulatory Compliance</h4>
+
+<ul>
+<li>Participation in cybersecurity projects including regulatory compliance (GDPR, ISO, information security).</li>
+<li>Training and collaboration in ethical hacking, pentesting and vulnerability analysis.</li>
+<li>Monitoring projects involving implementation of security systems and risk management frameworks.</li>
+<li>Practical learning in a creative, collaborative professional environment with national and international scope.</li>
+</ul>
+
+<h4>Gaming Systems Security and Certification</h4>
+
+<ul>
+<li>Advisory and preparation of functionality and security certification reports for gaming systems according to the requirements of the Spanish Directorate General for the Regulation of Gambling (DGOJ) and Law 13/2011.</li>
+<li>Participation in evaluation and validation processes required to obtain official certifications issued or required by the DGOJ.</li>
+<li>Implementation of Information Security Management Systems based on ISO 27001 for gaming operators.</li>
+<li>Audits of online and on-site gaming systems ensuring compliance with the Spanish regulatory framework.</li>
+</ul>
+
+<h4>Web Accessibility and Regulatory Compliance</h4>
+
+<ul>
+<li>Preparation and review of Accessibility Statements for public sector organizations.</li>
+<li>Evaluation of web and mobile accessibility according to EU Directive 2016/2102, Royal Decree 1112/2018 and WCAG 2.1.</li>
+<li>Analysis of perceivability, operability, understandability and robustness to identify accessibility barriers.</li>
+<li>Advising on best practices and strategies for continuous improvement of digital accessibility.</li>
+</ul>
+
+</div>
+
+<div class="experience-img">
+<img src="img/ey.jpg" alt="EY Logo">
+</div>
+
+</div>
+
 </section>
 
-<section id="certifications">
-    <h2>Certifications & Licenses</h2>
-    <ul>
-        <li>SQL for Data Science — UC Davis</li>
-        <li>C2 English Certificate — EF SET</li>
-        <li>First Certificate — Cambridge</li>
-        <li>Data & Cybersecurity — BBVA</li>
-        <li>ENS — CCN CERT</li>
-    </ul>
+
+<section id="certifications" class="certifications">
+
+<h2>Certifications</h2>
+
+<ul>
+
+<li>
+<strong>Data & Cybersecurity (Grade: 87.63%)</strong><br>
+BBVA Spain
+</li>
+
+<li>
+<strong>National Security Framework (RD 311/2022)</strong><br>
+CCN-CERT – National Cryptologic Centre
+</li>
+
+<li>
+<strong>SQL for Data Science (Grade: 88.49%)</strong><br>
+University of California, Davis
+</li>
+
+<li>
+<strong>English Certificate (C2 Proficiency)</strong><br>
+EF SET
+</li>
+
+<li>
+<strong>First Certificate in English</strong><br>
+Cambridge English
+</li>
+
+</ul>
+
 </section>
+
 
 <section id="contact" class="contact">
-    <h2>Contact</h2>
-    https://www.linkedin.com/in/alberto-ortiz-gonzalez
+
+<h2>Contact</h2>
+
+<a href="https://www.linkedin.com/in/alberto-ortiz-gonzalez" target="_blank">
+Connect on LinkedIn
+</a>
+
 </section>
 
+
 <footer>
-    © 2026 · Alberto Ortiz González · All rights reserved
+
+© 2026 · Alberto Ortiz González · All rights reserved
+
 </footer>
 
+
 <script>
-function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('show');
+
+function toggleMenu(){
+document.querySelector('.nav-links').classList.toggle('show');
 }
+
 </script>
 
 </body>
